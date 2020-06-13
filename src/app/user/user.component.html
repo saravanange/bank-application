@@ -1,0 +1,43 @@
+
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!--  <span>HOME</span> -->
+     <span><a href="/">HOME</a></span>
+     <span class="spacer"></span>
+     <a  mat-button  routerLink="/login">Logout</a>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  <br><br>
+<table>
+  <tr>
+   <td>
+<div *ngIf="accounts" class="products">
+    <h2>Accoumt Number {{accounts.account_no | uppercase}} Details</h2>
+    <div><span>Description: </span>{{accounts._id}}</div>
+    <div><span>Accoumt Baance : </span>{{accounts.balance}}</div>
+    <div><span>Update Date: </span>{{accounts.date_of_opening}}</div>
+  </div> 
+    </td>
+  </tr>
+</table>
+<br>
+<table>
+<tr> 
+  <td> 
+    <div>    <!--  <button (click)="deposit(accounts._id)"> -->
+        <button routerLink="/deposit/{{accounts.name}}">
+          DepositMoney
+        </button>
+      </div>
+    </td>
+    <td>
+      <div>
+        <!--  <button (click)="deposit(accounts._id)"> -->
+          <button routerLink="/withdraw/{{accounts.name}}">
+            WithDrawMoney
+          </button>
+        </div>
+  
+</td>
+</tr>
+</table>

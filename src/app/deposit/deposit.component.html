@@ -1,0 +1,29 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!--  <span>HOME</span> -->
+     <span><a href="/">HOME</a></span>
+     <span class="spacer"></span>
+     <a  mat-button  routerLink="/login">Logout</a>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  <br><br>
+<table align="center">
+  <tr>
+
+  
+
+    <h2>Amount Deposit Terminal </h2>
+    <div>
+      <label>Enter Deposit Ammount:
+        <input [(ngModel)]="accounts.balance" placeholder="Deposit Ammount"/>
+      </label><br>
+      
+    </div>
+  </tr>
+  <br>
+  <tr>
+    <td align="center">
+    <button  (click)="updateAccount()">Deposit</button>
+  </td>
+</tr>
+</table>

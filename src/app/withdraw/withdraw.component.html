@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <!--  <span>HOME</span> -->
+     <span><a href="/">HOME</a></span>
+     <span class="spacer"></span>
+     <a  mat-button  routerLink="/login">Logout</a>
+  </mat-toolbar-row>
+  </mat-toolbar>
+  <br><br>
+
+
+<table align="center">
+  <tr>
+
+  
+
+    <h2>Amount WithDraw Terminal </h2>
+    <div>
+      <label>Enter Withdraw Ammount:
+        <input [(ngModel)]="accounts.balance" placeholder="Deposit Ammount" required="true"/>
+      </label><br>
+      
+    </div>
+  </tr>
+  <br>
+  <tr>
+    <td align="center">
+    <button (click)="updateAccount()">WithDraw</button>
+  </td>
+</tr>
+</table>

@@ -1,0 +1,46 @@
+
+<mat-toolbar color="primary">
+   
+
+
+    <span>Open Account Form</span>
+    
+  </mat-toolbar>
+  <mat-card class="my-card">
+    <mat-card-content>
+        <form class="my-form">
+           <mat-form-field class="full-width">
+                  <mat-label>First Name</mat-label>
+                  <input  matInput  placeholder="First name"  name="fname"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Last Name</mat-label>
+                  <input  matInput  placeholder="Last Name"  name="lname" >
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Account Type</mat-label>
+                  <input  matInput  placeholder="Account Type" [(ngModel)]="accounts.account_type" name="accounttype"  required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Minimum Balance</mat-label>
+                  <input  matInput  placeholder="Balance" [(ngModel)]="accounts.balance"  name="balance" required type="number">
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>AcccountNumber</mat-label>
+                  <input  matInput  placeholder="accountnumber"  [(ngModel)]="accounts.account_no" name="accountnumber" required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Username</mat-label>
+                  <input  matInput  placeholder="username" [(ngModel)]="accounts.name" name="username" required>
+               </mat-form-field>
+               <mat-form-field class="full-width">
+                  <mat-label>Password</mat-label>
+                  <input  matInput  placeholder="Password"  [(ngModel)]="accounts.password"  name="password">
+               </mat-form-field>
+         
+              </form>
+      </mat-card-content>
+     <mat-card-actions>
+        <button mat-raised-button (click)="register()" color="primary">OpenAccount</button>
+     </mat-card-actions>
+  </mat-card>

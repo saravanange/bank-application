@@ -28,8 +28,9 @@ export class LoginComponent implements OnInit {
       this.accounts = data;
       this.name = JSON.stringify(this.accounts.account_no);
       this.name = JSON.stringify(this.accounts.account_no);
-    //if (this.username == this.accounts.name && this.password == 'admin') {
-      if (this.username == this.accounts.name && this.username != null) {
+    
+    if (this.username == this.accounts.name && this.password == this.accounts.password) {
+    //  if (this.username == this.accounts.name && this.username != null) {
       this.router.navigate(['/user/'+this.accounts.name]);
     } else {
       alert("Invalid credentials");

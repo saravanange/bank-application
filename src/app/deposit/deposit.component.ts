@@ -26,11 +26,11 @@ export class DepositComponent implements OnInit {
     
   }
   updateAccount() {
-   
+    this.router.navigate(['/user/'+this.accounts.name]);
     this.accounts.balance = Number(this.accounts.balance) + Number(this.balance);
    
     this.rest.updateAccount(this.route.snapshot.params['id'], this.accounts).subscribe((result) => {
-      this.router.navigate(['/user/'+this.accounts.name]);
+    
     }, (err) => {
       console.log(err);
     });

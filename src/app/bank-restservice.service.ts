@@ -53,7 +53,7 @@ export class BankRestserviceService {
   }
 
   deleteAccount (id): Observable<any> {
-    return this.http.delete<any>(endpoint + 'accounts/' + id, httpOptions).pipe(
+    return this.http.delete<any>(endpoint + '/' + id, httpOptions).pipe(
       tap(_ => console.log(`deleted account id=${id}`)),
       catchError(this.handleError<any>('deleteAccount'))
     );

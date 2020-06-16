@@ -31,7 +31,13 @@ export class UserComponent implements OnInit {
 
   }
   
-  add(){
-
+  deleteAccount(id){
+    this.rest.deleteAccount(id).subscribe((data: {}) => {
+    
+      console.log(data);
+      alert("Account successfully Closed.!");
+      this.router.navigate(['/login']);
+    
+    });
   }
 }

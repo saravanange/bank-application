@@ -24,7 +24,6 @@ export class OpenaccountComponent implements OnInit {
     //this.router.navigate(["/register"]);
     this.rest.addAccount(this.accounts).subscribe((result) => {
       alert("Account successfully Created..!");
-      alert(result);
       this.router.navigate(['/login']);
     }, (err) => {
       console.log(err);

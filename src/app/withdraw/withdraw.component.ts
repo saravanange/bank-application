@@ -26,10 +26,11 @@ export class WithdrawComponent implements OnInit {
 
   updateAccount() {
     if (Number(this.balance)>= Number(this.accounts.balance) && Number(this.accounts.balance) != 0 ) {
-    this.accounts.balance = ( Number(this.balance) - Number(this.accounts.balance));
+      this.router.navigate(['/user/'+this.accounts.name]);
+      this.accounts.balance = ( Number(this.balance) - Number(this.accounts.balance));
     
       this.rest.updateAccount(this.route.snapshot.params['id'], this.accounts).subscribe((result) => {
-        this.router.navigate(['/user/'+this.accounts.name]);
+      
       }, (err) => {
         console.log(err);
       });
